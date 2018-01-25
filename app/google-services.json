@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "826210443818",
+    "firebase_url": "https://rmutsvnodemcu-c2512.firebaseio.com",
+    "project_id": "rmutsvnodemcu-c2512",
+    "storage_bucket": "rmutsvnodemcu-c2512.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826210443818:android:d3555d55d73c0045",
+        "android_client_info": {
+          "package_name": "wanpracha.rmutsv.ac.th.rmutsvmytimes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "826210443818-9300sgmhva8n0vilcoqq7hd8tdnk41tr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "wanpracha.rmutsv.ac.th.rmutsvmytimes",
+            "certificate_hash": "2056d01567485c4707971f0cba721fcb68a3be41"
+          }
+        },
+        {
+          "client_id": "826210443818-o3ee5pk2i67n7rdi11t8mld98rve9ii4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDIwLscemYBd3EZaVYnNkgPV8nBSk5UyI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "826210443818-o3ee5pk2i67n7rdi11t8mld98rve9ii4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
