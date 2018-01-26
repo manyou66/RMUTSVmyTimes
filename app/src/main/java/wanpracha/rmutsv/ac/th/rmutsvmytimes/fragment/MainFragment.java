@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,9 +19,11 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.Map;
+import java.util.Random;
 
 import wanpracha.rmutsv.ac.th.rmutsvmytimes.GraphActivity;
 import wanpracha.rmutsv.ac.th.rmutsvmytimes.R;
+import wanpracha.rmutsv.ac.th.rmutsvmytimes.utility.PostData;
 
 /**
  * Created by bow on 25/1/2561.
@@ -52,6 +55,25 @@ public class MainFragment extends Fragment{
                 Map map = (Map) dataSnapshot.getValue();
                 myTimesString = String.valueOf(map.get("myTimes"));
                 textView.setText(myTimesString);
+
+//                Get and Post Data From Firebase to mySQL
+                try {
+                    String strURL = "http://androidthai.in.th/piw/addGraphBrownie.php";
+                    Random random = new Random();
+                    int intX = Integer.parseInt(myTimesString);
+                    int intY = random.nextInt(10) + intX;
+
+                    PostData postData = new PostData(getActivity());
+                    postData.execute(Integer.toString(intX),
+                            Integer.toString(intY),
+                                    strURL);
+                    String strResult = postData.get();
+                    Log.d("26Jan", "Result ==>" +strResult);
+
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
 
             }//onDataChange
